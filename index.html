@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DailyDrop.it – Gadget Innovativi</title>
+  <style>
+    :root {
+      --primary: #1e90ff;
+      --dark: #333;
+      --light: #f9f9f9;
+      --card-bg: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --transition: 0.3s;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--light); color: var(--dark); }
+    header { background: var(--primary); padding: 1rem; text-align: center; color: #fff; }
+    header h1 { font-size: 2rem; }
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .card { background: var(--card-bg); border-radius: var(--radius); box-shadow: 0 4px 8px var(--shadow); overflow: hidden; transition: transform var(--transition), box-shadow var(--transition); }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px var(--shadow); }
+    .card img { width: 100%; display: block; }
+    .card-content { padding: 1rem; }
+    .card-content h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+    .card-content p { font-size: 0.95rem; line-height: 1.4; margin-bottom: 1rem; }
+    .btn { display: inline-block; padding: 0.6rem 1.2rem; background: var(--primary); color: #fff; text-decoration: none; border-radius: var(--radius); transition: background var(--transition); }
+    .btn:hover { background: darken(var(--primary), 10%); }
+    footer { text-align: center; margin: 2rem 0; color: #777; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DailyDrop.it</h1>
+    <p>I gadget più fighi sotto i 30€</p>
+  </header>
+  <main class="container">
+    <section class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Dispenser+Dentifricio" alt="Dispenser automatico dentifricio">
+        <div class="card-content">
+          <h2>Dispenser Automatico Dentifricio</h2>
+          <p>Si attacca al muro, elimina il caos in bagno e regala un tocco hi-tech.</p>
+          <a class="btn" href="https://amzn.to/3XXXXXXXX1" target="_blank">Acquista ora</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Aspirapolvere+USB" alt="Mini aspirapolvere USB">
+        <div class="card-content">
+          <h2>Mini Aspirapolvere USB</h2>
+          <p>Compatto, ricaricabile via USB, perfetto per la scrivania e le zone difficili.</p>
+          <a class="btn" href="https://amzn.to/3XXXXXXXX2" target="_blank">Acquista ora</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Organizer+Cavi" alt="Organizer magnetico cavi">
+        <div class="card-content">
+          <h2>Organizer Magnetico per Cavi</h2>
+          <p>Clip magnetica per tenere cavi, penne e cuffie sempre in ordine sulla scrivania.</p>
+          <a class="btn" href="https://amzn.to/3XXXXXXXX3" target="_blank">Acquista ora</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    © 2025 DailyDrop.it • Curated with ❤️ dall'ufficio
+  </footer>
+</body>
+</html>
