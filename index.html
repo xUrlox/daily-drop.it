@@ -1,72 +1,101 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DailyDrop.it – Gadget Innovativi</title>
+  <title>DailyDrop.it – Gadget Futuristici</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #1e90ff;
-      --dark: #333;
-      --light: #f9f9f9;
-      --card-bg: #fff;
-      --shadow: rgba(0, 0, 0, 0.1);
-      --radius: 12px;
-      --transition: 0.3s;
+      --bg: #121212;
+      --fg: #e0e0e0;
+      --accent: #00e5ff;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --shadow: rgba(0, 229, 255, 0.2);
+      --radius: 16px;
+      --transition: 0.4s;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--light); color: var(--dark); }
-    header { background: var(--primary); padding: 1rem; text-align: center; color: #fff; }
-    header h1 { font-size: 2rem; }
-    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
-    .card { background: var(--card-bg); border-radius: var(--radius); box-shadow: 0 4px 8px var(--shadow); overflow: hidden; transition: transform var(--transition), box-shadow var(--transition); }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 8px 16px var(--shadow); }
+    body { background: var(--bg); color: var(--fg); font-family: 'Orbitron', sans-serif; line-height: 1.6; }
+    header { text-align: center; padding: 2rem 1rem; background: linear-gradient(135deg, #00e5ff, #006db3); }
+    header h1 { font-size: 2.5rem; letter-spacing: 2px; color: #fff; }
+    header p { font-size: 1.1rem; margin-top: 0.5rem; color: #dfefff; }
+    main { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 8px 16px var(--shadow);
+      transition: transform var(--transition), box-shadow var(--transition);
+      backdrop-filter: blur(8px);
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 24px var(--shadow);
+    }
     .card img { width: 100%; display: block; }
-    .card-content { padding: 1rem; }
-    .card-content h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
-    .card-content p { font-size: 0.95rem; line-height: 1.4; margin-bottom: 1rem; }
-    .btn { display: inline-block; padding: 0.6rem 1.2rem; background: var(--primary); color: #fff; text-decoration: none; border-radius: var(--radius); transition: background var(--transition); }
-    .btn:hover { background: darken(var(--primary), 10%); }
-    footer { text-align: center; margin: 2rem 0; color: #777; font-size: 0.9rem; }
+    .card-content { padding: 1.5rem; }
+    .card-content h2 { font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--accent); }
+    .card-content p { font-size: 1rem; margin-bottom: 1rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      background: var(--accent);
+      color: var(--bg);
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-weight: bold;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn:hover {
+      background: #00a8cc;
+      transform: translateY(-2px);
+    }
+    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #555; }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card { animation: fadeInUp 0.8s ease forwards; }
   </style>
 </head>
 <body>
   <header>
     <h1>DailyDrop.it</h1>
-    <p>I gadget più fighi sotto i 30€</p>
+    <p>Scopri i gadget più futuristici sotto i 30€</p>
   </header>
-  <main class="container">
-    <section class="grid">
+  <main>
+    <div class="grid">
       <div class="card">
-        <img src="https://via.placeholder.com/400x300?text=Dispenser+Dentifricio" alt="Dispenser automatico dentifricio">
+        <img src="https://via.placeholder.com/400x250?text=Dispenser+Smart" alt="Dispenser Automatico Dentifricio">
         <div class="card-content">
-          <h2>Dispenser Automatico Dentifricio</h2>
-          <p>Si attacca al muro, elimina il caos in bagno e regala un tocco hi-tech.</p>
-          <a class="btn" href="https://amzn.to/3XXXXXXXX1" target="_blank">Acquista ora</a>
+          <h2>Dispenser Smart Dentifricio</h2>
+          <p>Con sensore a infrarossi, distribuzione perfetta e montaggio senza fori.</p>
+          <a class="btn" href="https://amzn.to/3XXXXXXXX1" target="_blank">Acquista</a>
         </div>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/400x300?text=Aspirapolvere+USB" alt="Mini aspirapolvere USB">
+        <img src="https://via.placeholder.com/400x250?text=Aspirapolvere+Cyber" alt="Mini Aspirapolvere USB">
         <div class="card-content">
-          <h2>Mini Aspirapolvere USB</h2>
-          <p>Compatto, ricaricabile via USB, perfetto per la scrivania e le zone difficili.</p>
-          <a class="btn" href="https://amzn.to/3XXXXXXXX2" target="_blank">Acquista ora</a>
+          <h2>Aspirapolvere USB Futuristico</h2>
+          <p>Potente motore brushless, design modulare e ricarica USB-C.</p>
+          <a class="btn" href="https://amzn.to/3XXXXXXXX2" target="_blank">Acquista</a>
         </div>
       </div>
       <div class="card">
-        <img src="https://via.placeholder.com/400x300?text=Organizer+Cavi" alt="Organizer magnetico cavi">
+        <img src="https://via.placeholder.com/400x250?text=Organizer+Magnetico+Pro" alt="Organizer Magnetico per Cavi">
         <div class="card-content">
-          <h2>Organizer Magnetico per Cavi</h2>
-          <p>Clip magnetica per tenere cavi, penne e cuffie sempre in ordine sulla scrivania.</p>
-          <a class="btn" href="https://amzn.to/3XXXXXXXX3" target="_blank">Acquista ora</a>
+          <h2>Organizer Magnetico Pro</h2>
+          <p>Clip ultra-strong, finitura metallica e gestione smart dei cavi.</p>
+          <a class="btn" href="https://amzn.to/3XXXXXXXX3" target="_blank">Acquista</a>
         </div>
       </div>
-    </section>
+    </div>
   </main>
   <footer>
-    © 2025 DailyDrop.it • Curated with ❤️ dall'ufficio
+    © 2025 DailyDrop.it • Innovazione dal tuo ufficio
   </footer>
 </body>
 </html>
